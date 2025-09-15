@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Safaricom Twaweza | KGE@NS BINGWA SOKONI</title>
+    <title>J.O DATA SOLUTIONS | Affordable Data, Calls & SMS</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -17,6 +17,7 @@
             --text-dark: #333333;
             --text-light: #ffffff;
             --background: #f5f5f5;
+            --fire: #ff5722; /* Fire color for branding */
         }
         * {
             margin: 0;
@@ -82,11 +83,21 @@
             max-height: 70%;
         }
         .logo-text {
-            font-size: 2.2rem;
+            font-size: 2.5rem;
             font-weight: 700;
             color: var(--text-light);
             text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
             transform: translateZ(20px);
+        }
+        .fire-icon {
+            color: var(--fire);
+            font-size: 2rem;
+            margin: 0 5px;
+            animation: firePulse 1.5s infinite alternate;
+        }
+        @keyframes firePulse {
+            from { transform: scale(1); }
+            to { transform: scale(1.2); }
         }
         .tagline {
             font-size: 1.8rem;
@@ -206,6 +217,13 @@
             height: 4px;
             background: linear-gradient(90deg, var(--light), var(--accent));
             border-radius: 2px;
+        }
+        .section-description {
+            text-align: center;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: var(--text-light);
+            opacity: 0.9;
         }
         .deals-grid {
             display: grid;
@@ -567,7 +585,7 @@
         
         @media (max-width: 768px) {
             .logo-text {
-                font-size: 1.8rem;
+                font-size: 2rem;
             }
             
             .tagline {
@@ -601,8 +619,8 @@
         }
         
         .special-offer {
-            background: rgba(255, 215, 0, 0.2);
-            border: 2px dashed var(--accent);
+            background: rgba(255, 87, 34, 0.2);
+            border: 2px dashed var(--fire);
             border-radius: 15px;
             padding: 20px;
             margin-bottom: 30px;
@@ -634,6 +652,11 @@
             font-size: 1rem;
             line-height: 1.5;
         }
+        
+        .fire-tag {
+            color: var(--fire);
+            font-weight: 600;
+        }
     </style>
 </head>
 <body>
@@ -656,196 +679,110 @@
         <header>
             <div class="logo-container">
                 <div class="logo">
-                    <img src="safaricom-Logo.png" alt="Safaricom Logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Safaricom_Logo.svg/1200px-Safaricom_Logo.svg.png" alt="Safaricom Logo">
                 </div>
-                <h1 class="logo-text">KGE@NS BINGWA SOKONI</h1>
+                <h1 class="logo-text"><span class="fire-icon">🔥</span> J.O DATA SOLUTIONS <span class="fire-icon">🔥</span></h1>
             </div>
-            <div class="tagline">SAFARICOM TWAWEZA</div>
-            <div class="subtitle">AUTOMATIC SERVICES</div>
-            <div class="subtitle">Your one time solutions to okoa jahazi</div>
+            <div class="tagline">Affordable Data, Calls & SMS — Anytime, Anywhere</div>
         </header>
         
         <div class="nav-tabs">
-            <div class="nav-tab active" onclick="showTab('special-offers')">Special Offers</div>
-            <div class="nav-tab" onclick="showTab('data-deals')">Data Deals</div>
-            <div class="nav-tab" onclick="showTab('monthly-weekly')">Monthly/Weekly</div>
-            <div class="nav-tab" onclick="showTab('sms-deals')">SMS Deals</div>
-            <div class="nav-tab" onclick="showTab('minutes-deals')">Minutes Deals</div>
+            <div class="nav-tab active" onclick="showTab('data-bundles')">Data Bundles</div>
+            <div class="nav-tab" onclick="showTab('unlimited-vibes')">Unlimited Vibes</div>
+            <div class="nav-tab" onclick="showTab('minutes-texts')">Minutes & Texts</div>
         </div>
         
-        <div id="special-offers" class="tab-content active">
+        <div id="data-bundles" class="tab-content active">
             <section class="deals-section">
-                <div class="special-offer">
-                    <h3>SPECIAL OFFER</h3>
-                    <p>THESE OFFERS BELOW CAN BE PURCHASED MORE THAN ONCE IN A DAY</p>
-                </div>
+                <h2 class="section-title">DATA BUNDLES</h2>
+                <p class="section-description">Buy once per day • For your everyday browsing & chilling...</p>
                 <div class="deals-grid">
                     <div class="deal-card">
-                        <div class="deal-price">Ksh 21</div>
+                        <div class="deal-price">Sh 19</div>
                         <div class="deal-details">1GB Data</div>
                         <div class="deal-validity">Validity: 1 Hour</div>
-                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Ksh 21 for 1GB - 1 Hour')">
+                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Sh 19 for 1GB - 1 Hour')">
                             <i class="fab fa-whatsapp"></i> Order Now
                         </button>
                     </div>
                     
                     <div class="deal-card">
-                        <div class="deal-price">Ksh 51</div>
-                        <div class="deal-details">1.5GB Data</div>
-                        <div class="deal-validity">Validity: 3 Hours</div>
-                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Ksh 51 for 1.5GB - 3 Hours')">
-                            <i class="fab fa-whatsapp"></i> Order Now
-                        </button>
-                    </div>
-                    
-                    <div class="deal-card">
-                        <div class="deal-price">Ksh 99</div>
-                        <div class="deal-details">1GB Data</div>
-                        <div class="deal-validity">Validity: 24 Hours</div>
-                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Ksh 99 for 1GB - 24 Hours')">
-                            <i class="fab fa-whatsapp"></i> Order Now
-                        </button>
-                    </div>
-                    
-                    <div class="deal-card">
-                        <div class="deal-price">Ksh 115</div>
-                        <div class="deal-details">2GB Data</div>
-                        <div class="deal-validity">Validity: 24 Hours</div>
-                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Ksh 115 for 2GB - 24 Hours')">
-                            <i class="fab fa-whatsapp"></i> Order Now
-                        </button>
-                    </div>
-                </div>
-            </section>
-        </div>
-        
-        <div id="data-deals" class="tab-content">
-            <section class="deals-section">
-                <h2 class="section-title">DATA DEALS (Daily / Midnight)</h2>
-                <div class="note-box">
-                    <p>Purchases are only once per number per day so choose your package wisely according to your usage or choose to buy to another number</p>
-                </div>
-                <div class="deals-grid">
-                    <div class="deal-card">
-                        <div class="deal-price">Ksh 55</div>
-                        <div class="deal-details">1.25GB Data</div>
-                        <div class="deal-validity">Validity: Midnight</div>
-                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Ksh 55 for 1.25GB - Midnight')">
-                            <i class="fab fa-whatsapp"></i> Order Now
-                        </button>
-                    </div>
-                    
-                    <div class="deal-card">
-                        <div class="deal-price">Ksh 110</div>
-                        <div class="deal-details">2GB Data</div>
-                        <div class="deal-validity">Validity: 24 Hours</div>
-                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Ksh 110 for 2GB - 24 Hours')">
-                            <i class="fab fa-whatsapp"></i> Order Now
-                        </button>
-                    </div>
-                    
-                    <div class="deal-card">
-                        <div class="deal-price">Ksh 20</div>
+                        <div class="deal-price">Sh 20</div>
                         <div class="deal-details">250MB Data</div>
                         <div class="deal-validity">Validity: 24 Hours</div>
-                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Ksh 20 for 250MB - 24 Hours')">
+                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Sh 20 for 250MB - 24 Hours')">
                             <i class="fab fa-whatsapp"></i> Order Now
                         </button>
                     </div>
                     
                     <div class="deal-card">
-                        <div class="deal-price">Ksh 19</div>
-                        <div class="deal-details">1GB Data</div>
-                        <div class="deal-validity">Validity: 1 Hour</div>
-                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Ksh 19 for 1GB - 1 Hour')">
-                            <i class="fab fa-whatsapp"></i> Order Now
-                        </button>
-                    </div>
-                    
-                    <div class="deal-card">
-                        <div class="deal-price">Ksh 50</div>
-                        <div class="deal-details">1.5GB Data</div>
-                        <div class="deal-validity">Validity: 3 Hours</div>
-                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Ksh 50 for 1.5GB - 3 Hours')">
-                            <i class="fab fa-whatsapp"></i> Order Now
-                        </button>
-                    </div>
-                    
-                    <div class="deal-card">
-                        <div class="deal-price">Ksh 99</div>
-                        <div class="deal-details">1GB Data</div>
-                        <div class="deal-validity">Validity: 24 Hours</div>
-                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Ksh 99 for 1GB - 24 Hours')">
-                            <i class="fab fa-whatsapp"></i> Order Now
-                        </button>
-                    </div>
-                </div>
-            </section>
-        </div>
-        
-        <div id="monthly-weekly" class="tab-content">
-            <section class="deals-section">
-                <h2 class="section-title">MONTHLY/WEEKLY DATA OFFERS</h2>
-                <div class="deals-grid">
-                    <div class="deal-card">
-                        <div class="deal-price">Ksh 49</div>
+                        <div class="deal-price">Sh 49</div>
                         <div class="deal-details">350MB Data</div>
                         <div class="deal-validity">Validity: 7 Days</div>
-                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Ksh 49 for 350MB - 7 Days')">
+                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Sh 49 for 350MB - 7 Days')">
                             <i class="fab fa-whatsapp"></i> Order Now
                         </button>
                     </div>
                     
                     <div class="deal-card">
-                        <div class="deal-price">Ksh 300</div>
+                        <div class="deal-price">Sh 50</div>
+                        <div class="deal-details">1.5GB Data</div>
+                        <div class="deal-validity">Validity: 3 Hours</div>
+                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Sh 50 for 1.5GB - 3 Hours')">
+                            <i class="fab fa-whatsapp"></i> Order Now
+                        </button>
+                    </div>
+                    
+                    <div class="deal-card">
+                        <div class="deal-price">Sh 55</div>
+                        <div class="deal-details">1.25GB Data</div>
+                        <div class="deal-validity">Validity: Till Midnight</div>
+                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Sh 55 for 1.25GB - Till Midnight')">
+                            <i class="fab fa-whatsapp"></i> Order Now
+                        </button>
+                    </div>
+                    
+                    <div class="deal-card">
+                        <div class="deal-price">Sh 99</div>
+                        <div class="deal-details">1GB Data</div>
+                        <div class="deal-validity">Validity: 24 Hours</div>
+                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Sh 99 for 1GB - 24 Hours')">
+                            <i class="fab fa-whatsapp"></i> Order Now
+                        </button>
+                    </div>
+                    
+                    <div class="deal-card">
+                        <div class="deal-price">Sh 109</div>
+                        <div class="deal-details">2GB Data</div>
+                        <div class="deal-validity">Validity: 24 Hours</div>
+                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Sh 109 for 2GB - 24 Hours')">
+                            <i class="fab fa-whatsapp"></i> Order Now
+                        </button>
+                    </div>
+                    
+                    <div class="deal-card">
+                        <div class="deal-price">Sh 250</div>
+                        <div class="deal-details">1.2GB Data</div>
+                        <div class="deal-validity">Validity: 1 Month</div>
+                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Sh 250 for 1.2GB - 1 Month')">
+                            <i class="fab fa-whatsapp"></i> Order Now
+                        </button>
+                    </div>
+                    
+                    <div class="deal-card">
+                        <div class="deal-price">Sh 300</div>
                         <div class="deal-details">2.5GB Data</div>
                         <div class="deal-validity">Validity: 7 Days</div>
-                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Ksh 300 for 2.5GB - 7 Days')">
+                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Sh 300 for 2.5GB - 7 Days')">
                             <i class="fab fa-whatsapp"></i> Order Now
                         </button>
                     </div>
                     
                     <div class="deal-card">
-                        <div class="deal-price">Ksh 700</div>
+                        <div class="deal-price">Sh 600</div>
                         <div class="deal-details">6GB Data</div>
                         <div class="deal-validity">Validity: 7 Days</div>
-                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Ksh 700 for 6GB - 7 Days')">
-                            <i class="fab fa-whatsapp"></i> Order Now
-                        </button>
-                    </div>
-                    
-                    <div class="deal-card">
-                        <div class="deal-price">Ksh 250</div>
-                        <div class="deal-details">1.2GB Data</div>
-                        <div class="deal-validity">Validity: 30 Days</div>
-                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Ksh 250 for 1.2GB - 30 Days')">
-                            <i class="fab fa-whatsapp"></i> Order Now
-                        </button>
-                    </div>
-                    
-                    <div class="deal-card">
-                        <div class="deal-price">Ksh 500</div>
-                        <div class="deal-details">2.5GB Data</div>
-                        <div class="deal-validity">Validity: 30 Days</div>
-                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Ksh 500 for 2.5GB - 30 Days')">
-                            <i class="fab fa-whatsapp"></i> Order Now
-                        </button>
-                    </div>
-                    
-                    <div class="deal-card">
-                        <div class="deal-price">Ksh 1,005</div>
-                        <div class="deal-details">8GB + 400 Minutes</div>
-                        <div class="deal-validity">Validity: 30 Days</div>
-                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Ksh 1,005 for 8GB + 400 Minutes - 30 Days')">
-                            <i class="fab fa-whatsapp"></i> Order Now
-                        </button>
-                    </div>
-                    
-                    <div class="deal-card">
-                        <div class="deal-price">Ksh 1,010</div>
-                        <div class="deal-details">10GB Data</div>
-                        <div class="deal-validity">Validity: 30 Days</div>
-                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Ksh 1,010 for 10GB - 30 Days')">
+                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Sh 600 for 6GB - 7 Days')">
                             <i class="fab fa-whatsapp"></i> Order Now
                         </button>
                     </div>
@@ -853,54 +790,37 @@
             </section>
         </div>
         
-        <div id="sms-deals" class="tab-content">
+        <div id="unlimited-vibes" class="tab-content">
             <section class="deals-section">
-                <h2 class="section-title">SMS DEALS</h2>
-                <div class="note-box">
-                    <p>SMS AND MINUTES CAN BE PURCHASED MULTIPLE TIMES</p>
+                <h2 class="section-title">UNLIMITED VIBES</h2>
+                <p class="section-description">Buy as many times as you want! • For the heavy users, streamers & TikTokers...</p>
+                <div class="special-offer">
+                    <h3>🆓 No limits. Buy again & again – no stress!</h3>
                 </div>
                 <div class="deals-grid">
                     <div class="deal-card">
-                        <div class="deal-price">Ksh 5</div>
-                        <div class="deal-details">20 SMS</div>
+                        <div class="deal-price">Sh 21</div>
+                        <div class="deal-details">1GB Data</div>
+                        <div class="deal-validity">Validity: 1 Hour</div>
+                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Sh 21 for 1GB - 1 Hour')">
+                            <i class="fab fa-whatsapp"></i> Order Now
+                        </button>
+                    </div>
+                    
+                    <div class="deal-card">
+                        <div class="deal-price">Sh 53</div>
+                        <div class="deal-details">1.5GB Data</div>
+                        <div class="deal-validity">Validity: 3 Hours</div>
+                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Sh 53 for 1.5GB - 3 Hours')">
+                            <i class="fab fa-whatsapp"></i> Order Now
+                        </button>
+                    </div>
+                    
+                    <div class="deal-card">
+                        <div class="deal-price">Sh 109</div>
+                        <div class="deal-details">2GB Data</div>
                         <div class="deal-validity">Validity: 24 Hours</div>
-                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Ksh 5 for 20 SMS - 24 Hours')">
-                            <i class="fab fa-whatsapp"></i> Order Now
-                        </button>
-                    </div>
-                    
-                    <div class="deal-card">
-                        <div class="deal-price">Ksh 10</div>
-                        <div class="deal-details">200 SMS</div>
-                        <div class="deal-validity">Validity: 24 Hours</div>
-                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Ksh 10 for 200 SMS - 24 Hours')">
-                            <i class="fab fa-whatsapp"></i> Order Now
-                        </button>
-                    </div>
-                    
-                    <div class="deal-card">
-                        <div class="deal-price">Ksh 30</div>
-                        <div class="deal-details">1000 SMS</div>
-                        <div class="deal-validity">Validity: 7 Days</div>
-                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Ksh 30 for 1000 SMS - 7 Days')">
-                            <i class="fab fa-whatsapp"></i> Order Now
-                        </button>
-                    </div>
-                    
-                    <div class="deal-card">
-                        <div class="deal-price">Ksh 101</div>
-                        <div class="deal-details">1500 SMS</div>
-                        <div class="deal-validity">Validity: 30 Days</div>
-                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Ksh 101 for 1500 SMS - 30 Days')">
-                            <i class="fab fa-whatsapp"></i> Order Now
-                        </button>
-                    </div>
-                    
-                    <div class="deal-card">
-                        <div class="deal-price">Ksh 202</div>
-                        <div class="deal-details">3500 SMS</div>
-                        <div class="deal-validity">Validity: 30 Days</div>
-                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Ksh 202 for 3500 SMS - 30 Days')">
+                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Sh 109 for 2GB - 24 Hours')">
                             <i class="fab fa-whatsapp"></i> Order Now
                         </button>
                     </div>
@@ -908,45 +828,61 @@
             </section>
         </div>
         
-        <div id="minutes-deals" class="tab-content">
+        <div id="minutes-texts" class="tab-content">
             <section class="deals-section">
-                <h2 class="section-title">MINUTES DEALS</h2>
-                <div class="note-box">
-                    <p>SMS AND MINUTES CAN BE PURCHASED MULTIPLE TIMES</p>
-                </div>
+                <h2 class="section-title">MINUTES & TEXTS</h2>
+                <p class="section-description">For when you gotta call or text that one person 😏</p>
                 <div class="deals-grid">
                     <div class="deal-card">
-                        <div class="deal-price">Ksh 22</div>
+                        <div class="deal-price">Sh 22</div>
                         <div class="deal-details">45 Minutes</div>
                         <div class="deal-validity">Validity: 3 Hours</div>
-                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Ksh 22 for 45 Minutes - 3 Hours')">
+                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Sh 22 for 45 Minutes - 3 Hours')">
                             <i class="fab fa-whatsapp"></i> Order Now
                         </button>
                     </div>
                     
                     <div class="deal-card">
-                        <div class="deal-price">Ksh 52</div>
-                        <div class="deal-details">Kredo 200</div>
+                        <div class="deal-price">Sh 23</div>
+                        <div class="deal-details">20 Minutes</div>
                         <div class="deal-validity">Validity: Till Midnight</div>
-                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Ksh 52 for Kredo 200 - Till Midnight')">
+                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Sh 23 for 20 Minutes - Till Midnight')">
                             <i class="fab fa-whatsapp"></i> Order Now
                         </button>
                     </div>
                     
                     <div class="deal-card">
-                        <div class="deal-price">Ksh 505</div>
-                        <div class="deal-details">300 Minutes</div>
-                        <div class="deal-validity">Validity: 30 Days</div>
-                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Ksh 505 for 300 Minutes - 30 Days')">
+                        <div class="deal-price">Sh 52</div>
+                        <div class="deal-details">200 Kredo</div>
+                        <div class="deal-validity">Validity: Till Midnight</div>
+                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Sh 52 for 200 Kredo - Till Midnight')">
                             <i class="fab fa-whatsapp"></i> Order Now
                         </button>
                     </div>
                     
                     <div class="deal-card">
-                        <div class="deal-price">Ksh 1000</div>
-                        <div class="deal-details">800 Minutes</div>
-                        <div class="deal-validity">Validity: 30 Days</div>
-                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Ksh 1000 for 800 Minutes - 30 Days')">
+                        <div class="deal-price">Sh 5</div>
+                        <div class="deal-details">20 SMS</div>
+                        <div class="deal-validity">Validity: 24 Hours</div>
+                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Sh 5 for 20 SMS - 24 Hours')">
+                            <i class="fab fa-whatsapp"></i> Order Now
+                        </button>
+                    </div>
+                    
+                    <div class="deal-card">
+                        <div class="deal-price">Sh 10</div>
+                        <div class="deal-details">200 SMS</div>
+                        <div class="deal-validity">Validity: 24 Hours</div>
+                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Sh 10 for 200 SMS - 24 Hours')">
+                            <i class="fab fa-whatsapp"></i> Order Now
+                        </button>
+                    </div>
+                    
+                    <div class="deal-card">
+                        <div class="deal-price">Sh 35</div>
+                        <div class="deal-details">1000 SMS</div>
+                        <div class="deal-validity">Validity: 7 Days</div>
+                        <button class="whatsapp-btn" onclick="orderOnWhatsApp('Sh 35 for 1000 SMS - 7 Days')">
                             <i class="fab fa-whatsapp"></i> Order Now
                         </button>
                     </div>
@@ -955,11 +891,11 @@
         </div>
         
         <section class="about-section">
-            <h2 class="about-title">About KGE@NS BINGWA SOKONI</h2>
+            <h2 class="about-title">About J.O DATA SOLUTIONS</h2>
             <div class="about-content">
-                <p>Welcome to KGE@NS BINGWA SOKONI, your trusted Safaricom Twaweza service provider. We offer a wide range of affordable data, minutes, and SMS deals to keep you connected with your loved ones and the world. Our automatic services provide one-time solutions to okoa jahazi, ensuring you stay connected even when you're running low on airtime.</p>
+                <p>Welcome to <span class="fire-tag">J.O DATA SOLUTIONS</span>, your trusted provider of affordable data, calls, and SMS services. We offer a wide range of deals to keep you connected with your loved ones and the world, anytime and anywhere.</p>
                 <br>
-                <p>With our convenient WhatsApp ordering system, getting your preferred deal is just a click away. We accept payments via M-Pesa Buy Goods and even support OKOA services for when you need that urgent top-up. Trust KGE@NS BINGWA SOKONI for all your mobile service needs!</p>
+                <p>Our services work with or without Okoa Jahazi, ensuring you stay connected even when you're running low on airtime. With our convenient WhatsApp ordering system, getting your preferred deal is just a click away. We accept payments via M-Pesa and provide fast, easy, and reliable services. <span class="fire-tag">J.O got you covered!</span></p>
             </div>
         </section>
         
@@ -968,33 +904,33 @@
             <div class="contact-info">
                 <div class="contact-item">
                     <i class="fas fa-money-bill-wave"></i>
-                    <span>Lipa Na M-Pesa: <strong>Buy Goods Till 3462234</strong></span>
+                    <span>M-Pesa Till: <strong>3587050</strong></span>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-user"></i>
-                    <span>Account Name: <strong>EVANS OMIIT ETYANG</strong></span>
+                    <span>Account Name: <strong>Josiah Kombo Ongaga</strong></span>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-phone-alt"></i>
-                    <span>Call Support: <strong>+254791002497</strong></span>
+                    <span>Call: <strong>0719534393</strong></span>
                 </div>
                 <div class="contact-item">
-                    <i class="fas fa-clock"></i>
-                    <span>Service: <strong>3 minutes Delay Reverse</strong></span>
+                    <i class="fas fa-check-circle"></i>
+                    <span>Works with: <strong>Okoa Jahazi</strong></span>
                 </div>
             </div>
         </section>
         
         <footer>
-            <p>&copy; 2023 KGE@NS BINGWA SOKONI. All rights reserved.</p>
-            <p>SAFARICOM TWAWEZA - AUTOMATIC SERVICES</p>
+            <p>&copy; 2023 J.O DATA SOLUTIONS. All rights reserved.</p>
+            <p>Fast, Easy, Reliable — <span class="fire-tag">J.O got you covered!</span></p>
         </footer>
     </div>
     
     <script>
         // WhatsApp ordering function
         function orderOnWhatsApp(dealDetails) {
-            const phoneNumber = "254791002497"; // Kenya country code + number
+            const phoneNumber = "254719534393"; // Kenya country code + number
             const message = `Hi, I'd like to order: ${dealDetails}`;
             const encodedMessage = encodeURIComponent(message);
             const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
@@ -1003,7 +939,7 @@
         
         // Quick WhatsApp function
         function quickWhatsApp() {
-            const phoneNumber = "254791002497"; // Kenya country code + number
+            const phoneNumber = "254719534393"; // Kenya country code + number
             const message = `Hi, I'm interested in your services.`;
             const encodedMessage = encodeURIComponent(message);
             const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
